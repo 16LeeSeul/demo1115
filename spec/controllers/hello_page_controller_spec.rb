@@ -11,7 +11,7 @@ RSpec.describe HelloPageController, type: :controller do
     it "returns a success response" do
       get :hello, params: {}, session: valid_session
       expect(response).to be_success
-      expect(response.body).to include("Congratulations")
+      expect(response.body).to include("Congratulations") #congratulations를 포함해야 코드가 돌아갈 수 있도록 설정(template화)
       expect(response.content_type).to eq("text/html")
     end
   end
